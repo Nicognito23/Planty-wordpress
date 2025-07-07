@@ -12,15 +12,19 @@ Updated: 2025-06-20 07:28:42
 */
 
 
-.bouton-commander .elementor-button {
-    background-color:  #3B8E46 !important;
-    padding: 18px 56px !important; /* hauteur OK (18px), largeur augmentée (56px) */
-    border-radius: 8px !important;
-    font-size: 16px !important;
-    display: inline-block !important;
-    text-align: center !important;
+.elementor-21 .elementor-element.elementor-element-70edad2 .elementor-button {
+    display: flex !important;
+    align-items: center !important; /* pour centrer le texte verticalement */
+    justify-content: center ;
+    width: 100% !important;  
+   
+}
+
+.groupe-canette {
+    position: relative;
   }
-  
-  
-  
-  
+
+  /* 1. On fait remonter la section blanche pour recouvrir la courbe beige */
+/* Section blanche sous la courbe beige */
+/* la section blanche sous la courbe beige */
+/* 1) La section blanche, qui se place sous la courbe beige */
