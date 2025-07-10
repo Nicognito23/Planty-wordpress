@@ -1,0 +1,8 @@
+.DS_Store
+wp-content/uploads/
+wp-content/plugins/
+wp-content/upgrade-temp-backup/
+wp-content/wpcf7_uploads/
+logs/
+
+
