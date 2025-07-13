@@ -24,6 +24,23 @@ Updated: 2025-06-20 07:28:42
     position: relative;
   }
 
+  .wpcf7 input[type="submit"] {
+    background-color: #E0B9B4 !important;
+    color: white !important;
+    display: block !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  
+  .wpcf7 input[type="submit"]:hover {
+    background-color: #C02E44 !important;
+  }
+  
+
+  
+  
+  
+  
   /* 1. On fait remonter la section blanche pour recouvrir la courbe beige */
 /* Section blanche sous la courbe beige */
 /* la section blanche sous la courbe beige */
