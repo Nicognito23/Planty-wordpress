@@ -138,4 +138,4 @@ Projet réalisé dans le cadre d'une formation WordPress
 
 ---
 
-*Développé avec ❤️ et beaucoup de ☕* 
+*Développé avec ❤️ et beaucoup de ☕*
