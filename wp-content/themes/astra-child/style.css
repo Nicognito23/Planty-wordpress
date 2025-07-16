@@ -4,7 +4,7 @@ Theme URI: https://wpastra.com/
 Template: astra
 Author: Raux
 Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
-Description: The Astra WordPress theme is lightning-fast and highly customizable. It has over 1 million downloads and the only theme in the world with 5,700+ five-star reviews! It’s ideal for professional web designers, solopreneurs, small businesses, eCommerce, membership sites and any type of website. It offers special features and templates so it works perfectly with all page builders like Spectra, Elementor, Beaver Builder, etc. Fast performance, clean code, mobile-first design and schema markup are all built-in, making the theme exceptionally SEO-friendly. It’s fully compatible with WooCommerce, SureCart and other eCommerce plugins and comes with lots of store-friendly features and templates. Astra also provides expert support for free users. A dedicated team of fully trained WordPress experts are on hand to help with every aspect of the theme. Try the live demo of Astra: https://zipwp.org/themes/astra/
+Description: The Astra WordPress theme is lightning-fast and highly customizable. It has over 1 million downloads and the only theme in the world with 5,700+ five-star reviews! It's ideal for professional web designers, solopreneurs, small businesses, eCommerce, membership sites and any type of website. It offers special features and templates so it works perfectly with all page builders like Spectra, Elementor, Beaver Builder, etc. Fast performance, clean code, mobile-first design and schema markup are all built-in, making the theme exceptionally SEO-friendly. It's fully compatible with WooCommerce, SureCart and other eCommerce plugins and comes with lots of store-friendly features and templates. Astra also provides expert support for free users. A dedicated team of fully trained WordPress experts are on hand to help with every aspect of the theme. Try the live demo of Astra: https://zipwp.org/themes/astra/
 Tags: custom-menu,custom-logo,entertainment,one-column,two-columns,left-sidebar,e-commerce,right-sidebar,custom-colors,editor-style,featured-images,full-width-template,microformats,post-formats,rtl-language-support,theme-options,threaded-comments,translation-ready,blog
 Version: 4.11.3.1750404522
 Updated: 2025-06-20 07:28:42
@@ -45,3 +45,402 @@ Updated: 2025-06-20 07:28:42
 /* Section blanche sous la courbe beige */
 /* la section blanche sous la courbe beige */
 /* 1) La section blanche, qui se place sous la courbe beige */
+
+/* ========================================
+   CSS FORMULAIRE DE COMMANDE PLANTY
+======================================== */
+
+/* NEUTRALISATION DES INTERFERENCES ASTRA */
+.commande-form-container * {
+    box-sizing: border-box !important;
+}
+
+/* Neutraliser toutes les marges Astra sur les headings dans notre container */
+.commande-form-container h1,
+.commande-form-container h2,
+.commande-form-container h3,
+.commande-form-container .entry-content h1,
+.commande-form-container .entry-content h2,
+.commande-form-container .entry-content h3 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Neutraliser les styles de conteneur Astra */
+.commande-form-container .ast-container,
+.commande-form-container .ast-row,
+.commande-form-container .site-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+}
+
+/* Container principal du formulaire */
+.commande-form-container {
+    background-color: #3B8E46; /* Vert Planty */
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Syne', sans-serif;
+}
+
+
+
+/* Trait de séparation vertical */
+.form-columns::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: white;
+    transform: translateX(-50%);
+}
+
+.form-left, .form-right {
+    flex: 1;
+}
+
+.form-left {
+    padding-left: 60px;
+}
+
+/* Titres des sections */
+.form-left h3, .form-right h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Syne', sans-serif;
+    text-align: left;
+}
+
+/* Champs du formulaire - Taille ajustée maquette */
+.wpcf7 .form-field {
+    width: 75% !important;
+    max-width: 320px !important;
+    padding: 11px 14px;
+    border: none;
+    border-radius: 3px;
+    background-color: white;
+    color: #333;
+    font-size: 15px;
+    margin-top: 5px;
+    font-family: 'Syne', sans-serif;
+    margin: 5px 0 0 0 !important;
+    display: block !important;
+}
+
+/* Forcer la largeur sur tous les types de champs */
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"] {
+    width: 75% !important;
+    max-width: 320px !important;
+    margin: 5px 0 0 0 !important;
+    display: block !important;
+}
+
+.wpcf7 .form-field:focus {
+    outline: 2px solid #E0B9B4;
+    background-color: #f9f9f9;
+}
+
+/* Labels */
+.wpcf7 label {
+    color: white;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    text-align: left;
+}
+
+.wpcf7 p {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+/* Container du bouton */
+.form-submit-container {
+    text-align: center;
+}
+
+/* Bouton Commander - Sélecteurs ultra spécifiques */
+.commande-form-container .wpcf7 .btn-commander,
+.commande-form-container .wpcf7 input[type="submit"],
+.commande-form-container .form-submit-container .wpcf7 input[type="submit"],
+.commande-form-container .wpcf7-form input[type="submit"] {
+    background-color: #E0B9B4 !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 30px !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+    font-family: 'Syne', sans-serif !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+.commande-form-container .wpcf7 .btn-commander:hover,
+.commande-form-container .wpcf7 input[type="submit"]:hover,
+.commande-form-container .form-submit-container .wpcf7 input[type="submit"]:hover,
+.commande-form-container .wpcf7-form input[type="submit"]:hover {
+    background-color: #C02E44 !important;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   CSS SECTION "VOTRE COMMANDE" PLANTY - VERSION MAQUETTE
+======================================== */
+
+/* Section titre COMMANDER */
+.titre-commander-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Titre COMMANDER - Surcharger Astra avec spécificité maximale */
+body .commande-form-container .titre-commander,
+body .commande-form-container h1.titre-commander,
+body .entry-content h1.titre-commander,
+body h1.titre-commander,
+.entry-content h1.titre-commander {
+    color: white !important;
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    font-family: 'Syne', sans-serif !important;
+    margin: 0 0 30px 0 !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+    line-height: 1.2 !important;
+}
+
+/* ANCIENNES RÈGLES SUPPRIMÉES - Remplacées par les nouvelles règles d'alignement */
+
+/* ANCIENNE RÈGLE SUPPRIMÉE - Remplacée par la règle avec spécificité maximale ci-dessus */
+
+/* Compteur simplifié - Affichage du "0" par défaut */
+.compteur-simple {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.compteur-input {
+    width: 35px !important;
+    height: 38px !important;
+    background-color: white !important;
+    border: 1px solid #ccc !important;
+    border-radius: 3px !important;
+    text-align: center !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    color: #333 !important;
+    font-family: 'Syne', sans-serif !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 35px !important;
+    box-shadow: none !important;
+    /* Forcer l'affichage du "0" */
+    value: "0" !important;
+}
+
+/* Forcer l'affichage du "0" par défaut dans les compteurs */
+.compteur-input::placeholder {
+    color: #333 !important;
+    font-size: 14px !important;
+    opacity: 1 !important;
+}
+
+.compteur-input::-webkit-input-placeholder {
+    color: #333 !important;
+    opacity: 1 !important;
+}
+
+.compteur-input::-moz-placeholder {
+    color: #333 !important;
+    opacity: 1 !important;
+}
+
+.compteur-input:-ms-input-placeholder {
+    color: #333 !important;
+    opacity: 1 !important;
+}
+
+/* Afficher "0" quand le champ est vide */
+.compteur-input:placeholder-shown {
+    color: #333 !important;
+}
+
+.compteur-input[value=""] {
+    color: #333 !important;
+}
+
+/* Si le champ est vide, afficher "0" */
+.compteur-input:invalid {
+    color: #333 !important;
+}
+
+.compteur-input:focus {
+    outline: 2px solid #3B8E46 !important;
+    border-color: #3B8E46 !important;
+}
+
+/* Supprimer complètement les boutons +/- sur les champs number */
+.compteur-input::-webkit-outer-spin-button,
+.compteur-input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+    display: none !important;
+}
+
+.compteur-input[type=number] {
+    -moz-appearance: textfield !important;
+}
+
+/* Forcer l'apparence pour tous les navigateurs */
+input[type=number].compteur-input {
+    appearance: textfield !important;
+    -webkit-appearance: textfield !important;
+    -moz-appearance: textfield !important;
+}
+
+/* Ligne de séparation horizontale - Ajustée asymétriquement pour parfait alignement */
+.ligne-separation {
+    width: 690px !important;
+    height: 1px;
+    background-color: white;
+    margin: 0 auto 0 calc(50% - 340px) !important;
+    opacity: 0.9;
+}
+
+/* Sous-titre "Votre commande" - Réaligné sur les images */
+body.page .commande-form-container .sous-titre-commande,
+body .commande-form-container .votre-commande-section .sous-titre-commande,
+body .commande-form-container .sous-titre-commande,
+.commande-form-container .sous-titre-commande,
+.votre-commande-section .sous-titre-commande,
+.sous-titre-commande {
+    color: white !important;
+    font-size: 20px !important;
+    text-align: left !important;
+    font-family: 'Syne', sans-serif !important;
+    font-weight: 700 !important;
+    /* Position verticale - légèrement abaissée */
+    margin: 0 auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    /* Largeur réduite pour alignement sur les images */
+    width: 680px !important;
+    max-width: 680px !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    /* Position légèrement abaissée */
+    position: relative !important;
+    top: -15px !important;
+    transform: translateY(-10px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    /* Neutraliser toute autre marge */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Section Votre commande - Espacement ajusté */
+.votre-commande-section {
+    margin-bottom: 50px !important;
+    /* Espacement suffisant pour éviter que les traits se touchent */
+    padding-top: 10px !important;
+}
+
+/* Trait séparateur sous les compteurs - Ajusté asymétriquement pour parfait alignement */
+.votre-commande-section::after {
+    content: '';
+    display: block;
+    width: 690px !important;
+    height: 1px;
+    background-color: white;
+    margin: 30px auto 0 calc(50% - 340px) !important;
+    opacity: 0.9;
+}
+
+/* Layout 2 colonnes - Réduit pour alignement sur images */
+.form-columns {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 30px;
+    position: relative;
+    /* Largeur réduite pour alignement sur les images */
+    width: 680px !important;
+    margin: 0 auto 30px auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Image produit - Sans bords arrondis et alignement corrigé */
+.commande-form-container .produit-image,
+.votre-commande-section .produit-image,
+.produits-grid .produit-image,
+.produit-item .produit-image,
+.produit-image,
+img.produit-image {
+    width: 155px !important;
+    height: 105px !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+    display: block !important;
+    max-width: 155px !important;
+    min-width: 155px !important;
+}
+
+/* Forcer aussi pour toutes les images dans la grid - Sans bords arrondis */
+.produits-grid img,
+.produit-item img {
+    width: 153px !important;
+    height: 103px !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+    display: block !important;
+    max-width: 153px !important;
+    min-width: 153px !important;
+}
+
+/* Grid des produits - Correction alignement gauche */
+.produits-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0px !important;
+    column-gap: 0px !important;
+    row-gap: 15px !important;
+    /* Ajuster légèrement la largeur pour corriger l'alignement gauche */
+    width: 702px !important;
+    max-width: none !important;
+    margin: 0 auto 40px auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Item produit - Réajustement des marges pour centrage parfait */
+.produit-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0 12px !important;
+    padding: 0 !important;
+    justify-content: center;
+}
+
