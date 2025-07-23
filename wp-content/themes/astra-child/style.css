@@ -526,20 +526,289 @@ body,
     text-decoration: none !important;
 }
 
-/* =====================
-   RESPONSIVE - TABLETTE & MOBILE
-   ===================== */
-
-@media (max-width: 768px) {
-    /* Responsive formulaire page Nous contacter */
-    .contact-form-container::before {
-        display: none;
-    }
-    .page-nous-contacter {
-        padding: 40px 20px !important;
-    }
-    .contact-form-container .form-input {
-        max-width: 100% !important;
-    }
+/* Responsive MOBILE (≤ 767px) - Page Commander (propre et consolidé) */
+@media (max-width: 767px) {
+  /* Centrer le sous-titre "Votre commande" */
+  .sous-titre-commande {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+  /* Centrer les compteurs sous l'image */
+  .compteur-simple {
+    display: block !important;
+    margin: 12px auto 0 auto !important;
+    float: none !important;
+  }
+  
+  /* Grille produits en colonne et centrée */
+  .produits-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 0 10px 0 !important;
+  }
+  .produit-item {
+    align-items: center !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .produit-item img {
+    display: block !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  /* Formulaire : une colonne mobile */
+  .form-columns {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    width: 100% !important;
+  }
+  .form-left, .form-right {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    display: block !important;
+  }
+  .wpcf7 label,
+  .wpcf7 p,
+  .wpcf7 .form-field,
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 8px 0 !important;
+    padding: 6px 6px !important;
+    font-size: 13px !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+  }
+  .commande-form-container .wpcf7 input[type="submit"] {
+    font-size: 0.95em !important;
+    padding: 8px 0 !important;
+    max-width: 180px !important;
+    margin: 12px auto 0 auto !important;
+    border-radius: 6px !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+  }
+  /* Titre principal compact */
+  .titre-commander {
+    font-size: 1.1em !important;
+    max-width: 90vw !important;
+    overflow-wrap: break-word !important;
+    margin-bottom: 8px !important;
+    text-align: center !important;
+    letter-spacing: 0 !important;
+    padding: 0 !important;
+    line-height: 1.1 !important;
+  }
+  
+  /* Supprimer tous les traits séparateurs (horizontaux et verticaux, y compris pseudo-éléments et bordures) */
+  .form-separator,
+  .ligne-separation,
+  .form-separator::before,
+  .form-separator::after,
+  .ligne-separation::before,
+  .ligne-separation::after {
+    display: none !important;
+    border: none !important;
+  }
+  .form-left,
+  .form-right {
+    border: none !important;
+  }
+  /* Sous-titre "Votre commande" visible et centré */
+  .sous-titre-commande {
+    display: block !important;
+    position: static !important;
+    width: auto !important;
+    margin: 10px auto 18px auto !important;
+    text-align: center !important;
+    clear: both !important;
+    float: none !important;
+    font-size: 1.2em !important;
+    color: white !important;
+    font-family: 'Syne', sans-serif !important;
+    font-weight: 700 !important;
+  }
+  /* Compteurs parfaitement centrés sous chaque image */
+  .compteur-simple {
+    display: block !important;
+    margin: 12px auto 0 auto !important;
+    text-align: center !important;
+  }
+  /* Supprimer tous les traits séparateurs (horizontaux et verticaux) */
+  .ligne-separation,
+  .form-separator {
+    display: none !important;
+  }
+  /* Supprimer le trait horizontal sous les compteurs */
+  .votre-commande-section::after {
+    display: none !important;
+    content: none !important;
+  }
+  /* Supprimer le trait vertical entre les colonnes du formulaire */
+  .form-columns::after {
+    display: none !important;
+    content: none !important;
+  }
+  /* Champs du formulaire plus petits et parfaitement centrés */
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"],
+  .wpcf7 .form-field {
+    width: 260px !important;
+    max-width: 95vw !important;
+    min-width: 180px !important;
+    margin: 0 auto 8px auto !important;
+    font-size: 13px !important;
+    padding: 7px 8px !important;
+    box-sizing: border-box !important;
+    display: block !important;
+  }
+  /* Champs du formulaire alignés à gauche avec les titres */
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"],
+  .wpcf7 .form-field {
+    width: 260px !important;
+    max-width: 95vw !important;
+    min-width: 180px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 8px !important;
+    font-size: 13px !important;
+    padding: 7px 8px 7px 0 !important;
+    box-sizing: border-box !important;
+    display: block !important;
+  }
+  /* Centrage parfait des compteurs sous chaque image */
+  .produit-item {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .compteur-simple {
+    margin: 12px 0 0 0 !important;
+    text-align: center !important;
+    width: auto !important;
+    display: block !important;
+  }
+  /* Décaler légèrement les champs du formulaire vers la gauche */
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"],
+  .wpcf7 .form-field {
+    margin-left: 16px !important;
+  }
+  /* Aligner les champs du formulaire à gauche */
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"],
+  .wpcf7 .form-field {
+    margin-left: 0 !important;
+  }
+  /* Centre horizontalement les champs du formulaire */
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"],
+  .wpcf7 .form-field {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  /* Champs du formulaire parfaitement centrés */
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"],
+  .wpcf7 .form-field {
+    width: 100% !important;
+    max-width: 260px !important;
+    margin: 0 auto 8px auto !important;
+    display: block !important;
+  }
+  /* Plus d'espace entre le dernier compteur et le sous-titre */
+  .sous-titre-commande {
+    margin-top: 32px !important;
+  }
+  /* Ajoute un espace sous le dernier compteur avant le formulaire */
+  .compteur-simple:last-of-type {
+    margin-bottom: 32px !important;
+  }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Plus de marge entre le sous-titre et les images */
+  .sous-titre-commande {
+    margin-bottom: 56px !important;
+  }
+  /* Titre principal encore plus petit */
+  .titre-commander {
+    font-size: 1.8em !important;
+  }
+  /* Grille produits en 2 colonnes de 2 */
+  .produits-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    width: 100% !important;
+    margin: 0 auto 32px auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  /* Sous-titre centré sous le titre principal */
+  .sous-titre-commande {
+    display: block !important;
+    text-align: center !important;
+    margin: 24px auto 24px auto !important;
+    width: 100% !important;
+  }
+  /* Supprimer tous les traits séparateurs */
+  .ligne-separation,
+  .form-separator,
+  .votre-commande-section::after,
+  .form-columns::after {
+    display: none !important;
+  }
+  /* Formulaire 2 colonnes rapprochées et centré */
+  .form-columns {
+    display: flex !important;
+    gap: 80px !important;
+    max-width: 912px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .form-left, .form-right {
+    flex: 1;
+    padding: 0 !important;
+  }
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"],
+  .wpcf7 .form-field {
+    width: 260px !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+    display: block !important;
+    font-size: 13px !important;
+    padding: 8px 10px !important;
+    box-sizing: border-box !important;
+  }
+  .form-left {
+    margin-left: 20px !important;
+  }
+  .wpcf7 input[type="submit"],
+  .wpcf7-submit {
+    margin-top: 48px !important;
+  }
+  
+}
